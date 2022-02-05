@@ -19,7 +19,7 @@ module.exports = {
        [
           "@semantic-release/exec",
           {
-             "publishCmd":"npm version --no-git-tag-version prerelease; git add 'package.json'; git commit -m \":bookmark: prepare next release of ${nextRelease.version}\"; git push"
+             "publishCmd":"npm version --no-git-tag-version prerelease; git add 'package.json'; git commit -m \":bookmark: prepare next release of ${nextRelease.version}\""
           }
        ],
        [
