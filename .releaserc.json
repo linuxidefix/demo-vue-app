@@ -13,15 +13,7 @@
           "npmPublish": false
         }
       ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "CHANGELOG.md"
-          ],
-          "message": "chore(release): bumping to ${nextRelease.version} \n\n${nextRelease.notes}"
-        }
-      ]
+      "@semantic-release/github"
+      
     ]
   }
