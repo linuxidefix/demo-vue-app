@@ -17,12 +17,6 @@ module.exports = {
           }
        ],
        [
-          "@semantic-release/exec",
-          {
-             "publishCmd":"npm version --no-git-tag-version prerelease; git log ; git status"
-          }
-       ],
-       [
           "@semantic-release/git",
           {
              "assets":[
