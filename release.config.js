@@ -17,18 +17,18 @@ module.exports = {
           }
        ],
        [
+          "@semantic-release/exec",
+          {
+             "publishCmd":"npm version --no-git-tag-version prerelease"
+          }
+       ],
+       [
           "@semantic-release/git",
           {
              "assets":[
                 "package.json"
              ],
              "message":":bookmark: ${nextRelease.version}\n\n${nextRelease.notes}\n\nskip-checks: true"
-          }
-       ],
-       [
-          "@semantic-release/exec",
-          {
-             "publishCmd":"echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}; semver ${nextRelease.version}"
           }
        ]
        
