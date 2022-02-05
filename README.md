@@ -45,7 +45,7 @@ npm install semantic-release -D
 
 
 ```
-npm install @semantic-release/git @semantic-release/changelog -D
+npm install @semantic-release/exec @semantic-release/git @semantic-release/changelog -D
 ```
 > Already installed plugins:
 ```
