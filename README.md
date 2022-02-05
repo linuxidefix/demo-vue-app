@@ -25,6 +25,31 @@ https://github.com/semantic-release/semantic-release
 ## How to setup
 
 ```
+npm install @semantic-release -D
+```
+
+- check package.json
+
+```
+{
+"scripts": {
+    "semantic-release": "semantic-release"
+  },
+   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.2",
+  },
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/linuxidefix/demo-vue-app.git"
+  }
+}
+```
+
+
+
+```
 npm install @semantic-release/git @semantic-release/changelog -D
 ```
 > Already installed plugins:
@@ -34,3 +59,38 @@ npm install @semantic-release/git @semantic-release/changelog -D
 "@semantic-release/npm"
 "@semantic-release/github"
 ```
+
+## How to configure
+- create 
+``` .releaserc.json```
+
+
+```
+{
+    "branches": [
+      "main","master"
+    ],
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): bumping to ${nextRelease.version} \n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+ ``` 
