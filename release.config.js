@@ -1,5 +1,11 @@
 // this is a file configuration file for "semantic-release"
 // in ".releaserc.js" or "release.config.js"
+// you have also an optional custom template: release-template.hbs
+
+const { readFileSync } = require('fs');
+const path = require('path');
+
+const releaseTemplate = readFileSync(path.join('.github', 'release-template.hbs'));
 
 module.exports = {
     "branches":[
@@ -84,7 +90,7 @@ module.exports = {
                 ]
              },
              "releaseNotes":{
-                "template":"releaseTemplate"
+                "template": releaseTemplate
              }
           }
        ],
