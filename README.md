@@ -97,8 +97,8 @@ module.exports = {
           "npmPublish": false
         }
       ],
-      "@semantic-release/github"
-      
+      "@semantic-release/github",
+      "@semantic-release/git"
     ]
   }
   ```
