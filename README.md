@@ -135,6 +135,4 @@ module.exports = {
   }
  ``` 
 
- # TODO
- add gitmoji support :sparkles:
- add github release
+ 
