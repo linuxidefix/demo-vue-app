@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/linuxidefix/demo-vue-app/compare/1.1.0...1.2.0) (2022-02-05)
+
+
+### Features
+
+* already installed ([2238dd0](https://github.com/linuxidefix/demo-vue-app/commit/2238dd018321577f993f5092c0327115fa8cb42e))
+
 # [1.1.0](https://github.com/linuxidefix/demo-vue-app/compare/1.0.0...1.1.0) (2022-02-05)
 
 
