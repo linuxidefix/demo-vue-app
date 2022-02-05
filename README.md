@@ -27,4 +27,10 @@ https://github.com/semantic-release/semantic-release
 ```
 npm install @semantic-release/git @semantic-release/changelog -D
 ```
-
+> Already installed plugins:
+```
+"@semantic-release/commit-analyzer"
+"@semantic-release/release-notes-generator"
+"@semantic-release/npm"
+"@semantic-release/github"
+```
