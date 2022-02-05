@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/linuxidefix/demo-vue-app/compare/1.3.0...1.3.1) (2022-02-05)
+
+
+### Bug Fixes
+
+* add :memo: ([ea99de6](https://github.com/linuxidefix/demo-vue-app/commit/ea99de6c5b89923cf86b056de5928b12dd325961))
+
 ## [1.2.1](https://github.com/linuxidefix/demo-vue-app/compare/1.2.0...1.2.1) (2022-02-05)
 
 
