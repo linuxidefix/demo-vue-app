@@ -39,17 +39,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-      - name: Create Next Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm version --no-git-tag-version prerelease
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-          git add package.json
-          git commit -m ":bookmark: prepare next release"
-      - name: Push Next Release
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+      
