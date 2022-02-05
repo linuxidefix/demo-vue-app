@@ -22,4 +22,9 @@ test: Adding missing tests or correcting existing tests
 
 https://github.com/semantic-release/semantic-release
 
-## Feature
+## How to setup
+
+```
+npm install @semantic-release/git @semantic-release/changelog -D
+```
+
