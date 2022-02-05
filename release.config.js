@@ -28,7 +28,7 @@ module.exports = {
        [
           "@semantic-release/exec",
           {
-             "publishCmd":"echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
+             "publishCmd":"echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}; semver ${nextRelease.version}"
           }
        ]
        
