@@ -2,23 +2,35 @@
 // in ".releaserc.js" or "release.config.js"
 
 module.exports = {
-  branches: ['master', 'main'],
-  tagFormat: "${version}",
-  plugins: [
-    'semantic-release-gitmoji',
-    '@semantic-release/github',
-    [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      [
-        '@semantic-release/git',
-        {
-          assets: ['package.json', 'package.lock.json'],
-          message: ':bookmark: ${nextRelease.version}\n\n${nextRelease.notes}\n\nskip-checks: true',
-        },
-      ]  
-  ]
-}
+    "branches":[
+       "master",
+       "main"
+    ],
+    "tagFormat":"${version}",
+    "plugins":[
+       "semantic-release-gitmoji",
+       "@semantic-release/github",
+       [
+          "@semantic-release/npm",
+          {
+             "npmPublish":false
+          }
+       ],
+       [
+          "@semantic-release/git",
+          {
+             "assets":[
+                "package.json"
+             ],
+             "message":":bookmark: ${nextRelease.version}\n\n${nextRelease.notes}\n\nskip-checks: true"
+          }
+       ],
+       [
+          "@semantic-release/exec",
+          {
+             "publishCmd":"echo ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}"
+          }
+       ]
+       
+    ]
+ }

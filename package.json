@@ -9,6 +9,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "@semantic-release/exec": "^6.0.3",
     "vue": "^3.2.25"
   },
   "devDependencies": {
