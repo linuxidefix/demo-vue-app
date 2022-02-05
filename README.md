@@ -21,3 +21,5 @@ test: Adding missing tests or correcting existing tests
 ## Links
 
 https://github.com/semantic-release/semantic-release
+
+## Feature
