@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/linuxidefix/demo-vue-app/compare/1.0.0...1.1.0) (2022-02-05)
+
+
+### Features
+
+* add the single new feature ([642ab22](https://github.com/linuxidefix/demo-vue-app/commit/642ab222567011ac20646f38647de28b6d7524c4))
+
 # 1.0.0 (2022-02-05)
 
 
