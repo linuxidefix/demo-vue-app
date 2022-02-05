@@ -16,7 +16,7 @@ module.exports = {
       [
         '@semantic-release/git',
         {
-          assets: ['package.json'],
+          assets: ['package.json', 'package.lock.json'],
           message: ':bookmark: ${nextRelease.version}\n\n${nextRelease.notes}\n\nskip-checks: true',
         },
       ]  
