@@ -93,3 +93,4 @@ npm install @semantic-release/git @semantic-release/changelog -D
 
  # TODO
  add gitmoji support :sparkles:
+ add github release
