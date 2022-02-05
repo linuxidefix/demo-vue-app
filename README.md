@@ -56,11 +56,31 @@ npm install @semantic-release/git @semantic-release/changelog -D
 ```
 
 ## How to configure
-- create 
-``` .releaserc.json```
+- github release/tag + gitmoji commit
+
+-- create ``` release.config.js```
+
+```
+module.exports = {
+  branches: ['master', 'main'],
+  tagFormat: "${version}",
+  plugins: [
+    'semantic-release-gitmoji',
+    '@semantic-release/github',
+    [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ]
+  ],
+
+}
+```
+
 
 - github release/tag + conventional commit
-
+-- create ``` .releaserc.json```
 ```
 {
     "branches": [
@@ -84,7 +104,7 @@ npm install @semantic-release/git @semantic-release/changelog -D
   ```
 
 - git tag + conventional commit
-  
+-- create ``` .releaserc.json```
 ```
 {
     "branches": [
