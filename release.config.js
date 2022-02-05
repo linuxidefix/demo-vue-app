@@ -12,7 +12,13 @@ module.exports = {
         {
           "npmPublish": false
         }
-      ]
-  ],
-
+      ],
+      [
+        '@semantic-release/git',
+        {
+          assets: ['package.json'],
+          message: ':bookmark: ${nextRelease.version}\n\n${nextRelease.notes}\n\nskip-checks: true',
+        },
+      ]  
+  ]
 }
