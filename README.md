@@ -59,7 +59,32 @@ npm install @semantic-release/git @semantic-release/changelog -D
 - create 
 ``` .releaserc.json```
 
+- github release/tag + conventional commit
 
+```
+{
+    "branches": [
+      "main","master"
+    ],
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/github"
+      
+    ]
+  }
+  ```
+
+- git tag + conventional commit
+  
 ```
 {
     "branches": [
@@ -89,7 +114,6 @@ npm install @semantic-release/git @semantic-release/changelog -D
     ]
   }
  ``` 
-
 
  # TODO
  add gitmoji support :sparkles:
