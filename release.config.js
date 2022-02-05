@@ -3,6 +3,7 @@
 
 module.exports = {
   branches: ['master', 'main'],
+  tagFormat: "${version}",
   plugins: [
     'semantic-release-gitmoji',
     '@semantic-release/github',
@@ -12,5 +13,6 @@ module.exports = {
           "npmPublish": false
         }
       ]
-  ]
+  ],
+
 }
