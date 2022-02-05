@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/linuxidefix/demo-vue-app/compare/1.2.0...1.2.1) (2022-02-05)
+
+
+### Bug Fixes
+
+* update version from 1.2.0 to 1.3.0/1 ([951acdc](https://github.com/linuxidefix/demo-vue-app/commit/951acdc034211cc8d37c78fc7382725acd8ce2ec))
+
 # [1.2.0](https://github.com/linuxidefix/demo-vue-app/compare/1.1.0...1.2.0) (2022-02-05)
 
 
