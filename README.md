@@ -25,7 +25,7 @@ https://github.com/semantic-release/semantic-release
 ## How to setup
 
 ```
-npm install @semantic-release -D
+npm install semantic-release -D
 ```
 
 - check package.json
@@ -34,11 +34,6 @@ npm install @semantic-release -D
 {
 "scripts": {
     "semantic-release": "semantic-release"
-  },
-   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^19.0.2",
   },
  "repository": {
     "type": "git",
