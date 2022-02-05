@@ -1,6 +1,6 @@
 {
   "name": "demo-vue-app",
-  "version": "1.9.2",
+  "version": "1.9.3-0",
   "private": true,
   "scripts": {
     "dev": "vite",
