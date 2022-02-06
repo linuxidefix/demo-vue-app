@@ -1,0 +1,18 @@
+on:
+  push:
+    tags:
+      - '*.*.*'
+  workflow_dispatch:
+        
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set env
+        run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Test
+        run: |
+          echo tag=$TAG
+          echo tag=${{ env.TAG }}
+          echo tag=${{github.ref_name}}
