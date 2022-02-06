@@ -1,4 +1,4 @@
-name: "Release :bookmark:"
+name: Release
 
 on:
   workflow_dispatch:
