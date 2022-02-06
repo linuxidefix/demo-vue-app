@@ -34,7 +34,7 @@ jobs:
       
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: npx semantic-release
       
       # push prerelease commit done semantic exec plugin
