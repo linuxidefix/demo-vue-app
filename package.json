@@ -1,6 +1,6 @@
 {
   "name": "demo-vue-app",
-  "version": "1.13.1",
+  "version": "1.13.2-0",
   "private": true,
   "scripts": {
     "dev": "vite",
