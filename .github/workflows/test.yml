@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  push:
+    tags:
+      - '**'
+    branches:
+      - "**"  
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set env
+        run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Test
+        run: |
+          echo tag=$TAG
+          echo tag=${{ env.TAG }}
+          echo tag=${{github.ref_name}}
+      - name: Check branch
+        run: echo ${{github.ref_name}} is a branch  
+        if: ${{ github.ref_type == 'branch' }}
+      - name: Check tag
+        if: ${{ github.ref_type == 'tag' }}
+        run: echo ${{github.ref_name}} is a tag
+    
+      
