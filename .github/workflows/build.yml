@@ -43,4 +43,5 @@ jobs:
         run: |
           echo tag=$TAG
           echo tag=${{ env.TAG }}
-          echo tag=${{github.ref_name}}
+          echo tag=`echo ${{github.ref_name}} | sed 's/\//_/g'`
+          echo tag=${github.ref_name//\//_}

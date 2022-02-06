@@ -104,7 +104,7 @@ module.exports = {
        [
           "@semantic-release/exec",
           {
-             "publishCmd":"prerelease=`npm version --no-git-tag-version prerelease`; git commit -am \":bookmark: prepare next release $prerelease \""
+             "publishCmd":"prerelease=`npm version --no-git-tag-version prerelease`; git commit -am \"🔖 prepare next release $prerelease \""
           }
        ],
        [
