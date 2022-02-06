@@ -5,6 +5,7 @@ on:
     branches:
       - "main"
       - "master"
+      - '!dependabot-**'
   workflow_dispatch:
 
 jobs:
