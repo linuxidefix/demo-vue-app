@@ -1,12 +1,10 @@
-# Creates automatically a release
-# uses commit history and gitmoji convention
-# :bug: 'fix a bug' will create a patch release
-# :sparkles: 'new feature' will create a minor release
-# :boom: 'breaking change' will create a major release
-
-name: Release
+name: Build
 
 on:
+  push:
+    branches:
+      - "main"
+      - "master"
   workflow_dispatch:
 
 jobs:
@@ -17,12 +15,9 @@ jobs:
         with:
           persist-credentials: false
       - name: Check node
-        run: node --version
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
+        run: | 
+          node --version
+          npx --version
       
       - name: Cache node modules
         uses: actions/cache@v2
@@ -42,11 +37,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release -d
       
-      # push prerelease commit done semantic exec plugin
-      - name: Push next release
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
