@@ -34,10 +34,6 @@ npm install semantic-release -D
 {
 "scripts": {
     "semantic-release": "semantic-release"
-  },
- "repository": {
-    "type": "git",
-    "url": "https://github.com/linuxidefix/demo-vue-app.git"
   }
 }
 ```
@@ -45,7 +41,7 @@ npm install semantic-release -D
 
 
 ```
-npm install @semantic-release/exec @semantic-release/git @semantic-release/changelog -D
+npm install @semantic-release/exec @semantic-release/git @semantic-release/changelog semantic-release-gitmoji -D
 ```
 > Already installed plugins:
 ```
